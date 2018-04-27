@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class ResultSetSQL {
 		// 数据库位置
-		private static final String url = "jdbc:mysql://localhost:3306/shopping?Unicode=true&characterEncoding=UTF-8";
+		private static final String url = "jdbc:mysql://localhost:3306/parking?Unicode=true&characterEncoding=UTF-8";
 
 		//数据库用户名
 		private static final String username = "root";

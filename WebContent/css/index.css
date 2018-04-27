@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+body{
+	margin:0px 0px;
+	padding:0px 0px;
+}
+
+.formdiv{
+ 	position: relative;
+    width: 250px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    top: 250px;
+    left: 900px;
+	
+}
+
+.formdiv p{
+	text-align: center;
+    font-size: 15px;
+}
