@@ -8,7 +8,6 @@ function submitForm(){
 			var data = eval(Users);
 			for(var i = 0;i<data.length;i++){
 				if($("#name").val()==data[i].name && $("#password").val()==data[i].password){
-					alert("登陆成功");
 					a = 2;
 					break;
 				}		
@@ -17,7 +16,7 @@ function submitForm(){
 				alert("用户名或者密码错误");
 			}
 			else{
-				alert("登陆成功");
+				window.location.href = "html/parking.html"
 			}
 		},
 		error : function(error) {

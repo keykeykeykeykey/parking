@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>停车场信息管理页面</title>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/parking.js"></script>
+<style>
+#list{
+	border:1px solid black;
+	border-collapse:collapse;
+}
+
+tr,th,td{
+	border:1px solid black;
+}
+
+th,td{
+	width:100px;
+	height:30px;
+	text-align:center;
+}
+
+a{
+	cursor:pointer;
+	-webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+#change{
+	position: absolute;
+    top: 100px;
+    left: 500px;
+    display:none;
+}
+</style>
+</head>
+<body>
+	<div id="tb" style="height:auto">
+		<button onclick="append()">添加</button>
+	</div>
+	<br/>
+	<br/>
+	<table id="list">
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>价格</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+	</table>
+	<div id="change">
+		<form>
+			<label>编号</label><input type="text" id="num"/>
+			<br/>
+			<label>价格</label><input type="text" id="price"/>
+			<br/>
+			<button id="save" onclick="append()">保存</button>
+			<button id="cancel" onclick="cancel()">取消</button>
+		</form>
+	</div>
+</body>
+</html>
