@@ -68,4 +68,54 @@ public class ParkingService {
 		}
 		return 1;
 	}
+	
+	public List<Map<String, Object>> selectAllNotStop()
+	{
+		try 
+		{
+			return this.parkingdao.selectAllNotStop();
+		}
+		catch(Exception e)
+		{
+			System.out.println("错误");
+		}
+		return null;
+	}
+	
+	public int updateParkingByCar(String id,String carNum){
+		try 
+		{
+			return this.parkingdao.updateParkingByCar(id,carNum);
+		}
+		catch(Exception e)
+		{
+			System.out.println("错误");
+		}
+		return 1;
+	}
+	
+	public List<Map<String, Object>> selectAllStopped()
+	{
+		try 
+		{
+			return this.parkingdao.selectAllStopped();
+		}
+		catch(Exception e)
+		{
+			System.out.println("错误");
+		}
+		return null;
+	}
+	
+	public int updateParkingByLeave(String id){
+		try 
+		{
+			return this.parkingdao.updateParkingByLeave(id);
+		}
+		catch(Exception e)
+		{
+			System.out.println("错误");
+		}
+		return 1;
+	}
 }

@@ -64,6 +64,23 @@ public class ParkingServlet extends HttpServlet {
 			String num = request.getParameter("num");
 			String price = request.getParameter("price");
 			parkingservice.updateParking(id, num, price);
+		}else if(method.equals("not_stop")){
+			List<Map<String, Object>> parkings = parkingservice.selectAllNotStop();
+			out.write(JSON.toJSONString(parkings));
+			out.flush();
+			out.close();
+		}else if(method.equals("addCar")){
+			String id = request.getParameter("id");
+			String carNum = request.getParameter("carNum");
+			parkingservice.updateParkingByCar(id, carNum);
+		}else if(method.equals("stopped")){
+			List<Map<String, Object>> parkings = parkingservice.selectAllStopped();
+			out.write(JSON.toJSONString(parkings));
+			out.flush();
+			out.close();
+		}else if(method.equals("leaveCar")){
+			String id = request.getParameter("id");
+			parkingservice.updateParkingByLeave(id);
 		}
 	}
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>停车信息填入</title>
+<link rel="stylesheet" type="text/css" href="../css/manage.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/manage.js"></script>
+</head>
+<body>
+<div id="not_stop">
+	<div>
+		<span>剩余车位数量：</span><span></span>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<th>车位号码</th>
+				<th>价格(每小时)</th>
+				<th>操作</th>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<span onclick="first()">上一页</span>
+		<span onclick="next()">下一页</span>
+	</div>
+	<div>
+		<label>车牌号</label><input type="text" id="car_num"/>
+		<br/>
+		<button id="save">保存</button>
+		<button id="cancel" onclick="cancel()">取消</button>
+	</div>
+</div>
+<div id="stopped">
+	<div>
+		<span>已停车位数量：</span><span></span>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<th>车位号码</th>
+				<th>价格(每小时)</th>
+				<th>车牌号</th>
+				<th>开始停车时间</th>
+				<th>停车时间</th>
+				<th>操作</th>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<span>上一页</span>
+		<span>下一页</span>
+	</div>
+</div>
+</body>
+</html>
